@@ -2,6 +2,7 @@ const card = document.getElementById("card");
 const avatar = document.getElementById("avatar");
 const typesContainer = document.getElementById("typesContainer");
 const typesList = document.getElementById("typesList");
+const statsList = document.getElementById("statsList");
 
 const findPokemon = async (event) => {
 	try {
@@ -22,6 +23,7 @@ const renderData = (pokemon) => {
 	avatar.setAttribute("width", "150")
 	avatar.setAttribute("height", "150")
 	renderTypes(pokemon.types)
+	renderStats(pokemon.stats)
 }
 
 const renderTypes = (pokemonTypes) => {
@@ -29,6 +31,15 @@ const renderTypes = (pokemonTypes) => {
 	for (types of pokemonTypes) {
 		const li = document.createElement("li")
 		li.textContent = types.type.name
+		typesList.append(li)
+	}
+}
+
+const renderStats = (pokemonStats) => {
+	statsList.innerHTML = ''
+	for (stats of pokemonStats) {
+		const li = document.createElement("li")
+		li.textContent = `${stats.stat.name}: ${stats.base_stat}`
 		typesList.append(li)
 	}
 }
