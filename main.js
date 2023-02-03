@@ -8,7 +8,7 @@ const findPokemon = async (event) => {
 	try {
 		event.preventDefault();
 		const {value} = event.target.pokemonName
-		const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${value}`);
+		const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`);
 		const json = await data.json();
 		renderData(json);
 	} catch(e) {
