@@ -15,15 +15,19 @@ const findPokemon = async (event) => {
 		console.error(e)
 		alert("Ese pokemon no existe");
 	}
-}
+} 
 
 const renderData = (pokemon) => { 
-	avatar.setAttribute("src", `${pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}`)
-	avatar.setAttribute("alt", `${pokemon.name}`)
-	avatar.setAttribute("width", "150")
-	avatar.setAttribute("height", "150")
+	renderAvatar(pokemon.sprites)
 	renderTypes(pokemon.types)
 	renderStats(pokemon.stats)
+}
+
+const renderAvatar = (pokemonSprites) => {
+	avatar.setAttribute("src", `${pokemonSprites.versions["generation-v"]["black-white"].animated.front_default}`)
+	avatar.setAttribute("alt", `${pokemonSprites.name}`)
+	avatar.setAttribute("width", "150")
+	avatar.setAttribute("height", "150")
 }
 
 const renderTypes = (pokemonTypes) => {
