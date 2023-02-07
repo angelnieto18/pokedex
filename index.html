@@ -4,27 +4,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script defer src="main.js"></script>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Pokedex</title>
 </head>
 <body>
-	<h1>Escribe el nombre de un pokemon</h1>
+	<div id="container">
+		<header>
+			<h1 id="title">Escribe el nombre de un<br>pokemon</h1>
+		</header>
 
-	<form onsubmit="findPokemon(event)">
-		<div>
-			<input type="text" name="pokemonName">
-		</div>
-		<div>
-			<button type="submit">Enviar</button>
-		</div>
-	</form>
+		<form onsubmit="findPokemon(event)">
+			<input id="pokemonName" type="text" name="pokemonName" placeholder="ej. pikachu">
+			<button id="submit" type="submit">Mostrar</button>
+		</form>
 
-	<div id="card">
-		<img id="avatar">
-		<div id="typesContainer">
-			<ul id="typesList"></ul>
-		</div>
-		<div id="statsContainer">
-			<ul id="statsList"></ul>
+	</div>
+	<div id="pokemonContainer">
+		<div id="card">
+			<img id="avatar">
+			<div id="typesContainer">
+				<ul id="typesList"></ul>
+			</div>
+			<div id="statsContainer">
+				<ul id="statsList"></ul>
+			</div>
 		</div>
 	</div>
 </body>
