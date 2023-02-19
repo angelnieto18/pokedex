@@ -21,13 +21,13 @@ const renderData = (pokemon) => {
 	renderAvatar(pokemon.sprites)
 	renderTypes(pokemon.types)
 	renderStats(pokemon.stats)
+	card.style.backgroundColor = '#fff'
+	card.style.height = '325px'
 }
 
 const renderAvatar = (pokemonSprites) => {
-	avatar.setAttribute("src", `${pokemonSprites.versions["generation-v"]["black-white"].animated.front_default}`)
+	avatar.setAttribute("src", `${pokemonSprites.versions["generation-v"]["black-white"].front_default}`)
 	avatar.setAttribute("alt", `${pokemonSprites.name}`)
-	avatar.setAttribute("width", "150")
-	avatar.setAttribute("height", "150")
 }
 
 const renderTypes = (pokemonTypes) => {
@@ -44,6 +44,6 @@ const renderStats = (pokemonStats) => {
 	for (stats of pokemonStats) {
 		const li = document.createElement("li")
 		li.textContent = `${stats.stat.name}: ${stats.base_stat}`
-		typesList.append(li)
+		statsList.append(li)
 	}
 }

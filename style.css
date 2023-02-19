@@ -56,5 +56,41 @@ form {
 
 #pokemonContainer {
 	display: flex;
-	justify-content: center;
+	justify-content: center; 
+	margin-bottom: 1em;
+}
+
+#card {
+	width: 80%;
+	border-radius: 1.5em;
+	text-align: center;
+}
+
+#avatarContainer {
+	height: 135px;
+	position: relative;
+}
+
+img {
+	width: 150px;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+
+#typesContainer {
+	height: 40px;
+}
+
+#statsContainer {
+	height: 115px;
+}
+
+#typesList, #statsList {
+	list-style-type: none;
+	font-family: "Montserrat";
+	padding: 0;
 }
