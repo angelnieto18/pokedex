@@ -27,16 +27,15 @@ header {
 }
 
 form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	display: block;
+	text-align: center;
 	width: 100%;
 	font-size: 1rem;
 }
 
 #pokemonName {
-	width: 75%;
-	height: 1.5em;
+	width: calc(80% - 20px);
+	height: calc(2em - 20px);
 	padding: 10px;
 	border: none;
 	border-radius: 1.5em;
@@ -47,7 +46,7 @@ form {
 
 #submit {
 	width: 80%;
-	height: 2.5em;
+	height: 2em;
 	border: none;
 	border-radius: 1.5em;
 	font-family: "Montserrat";
