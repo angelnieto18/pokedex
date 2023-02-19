@@ -22,7 +22,6 @@ const renderData = (pokemon) => {
 	renderTypes(pokemon.types)
 	renderStats(pokemon.stats)
 	card.style.backgroundColor = '#fff'
-	card.style.height = '325px'
 }
 
 const renderAvatar = (pokemonSprites) => {
