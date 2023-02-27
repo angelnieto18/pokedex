@@ -15,9 +15,9 @@ const findPokemon = async (event) => {
 		console.error(e)
 		alert("Ese pokemon no existe");
 	}
-} 
+}
 
-const renderData = (pokemon) => { 
+const renderData = (pokemon) => {
 	renderAvatar(pokemon.sprites)
 	renderTypes(pokemon.types)
 	renderStats(pokemon.stats)
