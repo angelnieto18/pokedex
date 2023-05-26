@@ -4,7 +4,7 @@ const Pokedex = () => {
   return (
     <>
     <div id='container'>
-
+        
     </div>
     <div id='pokemonContainer'>
 
