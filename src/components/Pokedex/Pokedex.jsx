@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Card from '../Card/Card';
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState(null);
@@ -31,10 +31,14 @@ const Pokedex = () => {
       </div>
       <div id='pokemonContainer'>
         {pokemon === null ? (
-          <h2>Esperando</h2>
+          <div></div>
         ) : (
           <div>
-            <h2>{pokemon.name}</h2>
+            <Card
+              sprite={pokemon.sprites.front_default}
+              types={pokemon.types.map((pokemonTypes) => pokemonTypes.type.name)}
+              stats={pokemon.stats.map((pokemonStats) => pokemonStats)}
+            />
           </div>
         )}
       </div>
